@@ -42,6 +42,7 @@ function App() {
     let [filter, dispachFilter] = useReducer(filterReducer,"all");
 
     let tasksForTodolist = tasks;
+    let tasksForTodolist1 = tasks;
 
     if (filter === "active") {
         tasksForTodolist = tasks.filter(t => t.isDone === false);

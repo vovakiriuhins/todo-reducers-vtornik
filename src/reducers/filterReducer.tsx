@@ -3,7 +3,7 @@ import {FilterValuesType} from "../App";
 export const filterReducer = (state: FilterValuesType, action: FilterReducerACType) => {
   switch (action.type) {
       case 'FILTER-TASKS': {
-          // return state
+          return state
       }
       default: return state
   }
