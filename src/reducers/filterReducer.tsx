@@ -1,19 +1,19 @@
 import {FilterValuesType} from "../App";
 
-export const filterReducer = (state: FilterValuesType, action: FilterReducerACType) => {
+export const FilterReducer = (state: FilterValuesType, action: changeFilterACType): FilterValuesType => {
   switch (action.type) {
-      case 'FILTER-TASKS': {
-          return state
+      case 'CHANGE-FILTER': {
+          return action.payload.value
       }
       default: return state
   }
 }
 
-type FilterReducerACType = ReturnType<typeof filterReducerAC>
+type changeFilterACType = ReturnType<typeof changeFilterAC>
 
-export const filterReducerAC = (value: FilterValuesType) => {
+export const changeFilterAC = (value: FilterValuesType) => {
     return {
-        type: 'FILTER-TASKS',
+        type: 'CHANGE-FILTER',
         payload: {
             value
         }
